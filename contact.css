@@ -1,0 +1,110 @@
+/* CONTACT */
+.contact-container {
+    display: flex;
+    padding: 2em;
+    gap: 2rem;
+}
+/* Contact button and phone styling */
+.contact-container {
+  display: flex;
+  padding: 2em;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.contact-info {
+  max-width: 40rem;
+}
+
+.contact-text {
+  margin: 0.5rem 0 1rem;
+  color: #3a2f2f;
+  opacity: 0.9;
+}
+
+/* Mailto styled as a button */
+.contact-btn {
+  display: inline-block;
+  background: #d96f4c;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 1rem;
+  
+}
+
+/* Hover/focus states */
+.contact-btn:hover,
+.contact-btn:focus {
+  background: #c85f3f;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(217,111,76,0.15);
+}
+
+/* Phone line */
+.phone-line {
+  margin-top: 0.5rem;
+  color: #3a2f2f;
+}
+
+.phone-link {
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: #3a2f2f;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.phone-link:hover,
+.phone-link:focus {
+  color: #d96f4c;
+  text-decoration: underline;
+}
+/* Responsive: stack on small screens */
+@media (max-width: 800px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-info {
+    width: 100%;
+  }
+
+  .phone-link {
+    display: block;
+    margin: 0.5rem 0 0;
+  }
+}
+/* MOBILE */
+@media (max-width: 600px){
+      .contact-container {
+        flex-direction: column;
+        padding: 1em;
+    }
+    .contact-form,
+     .contact-info {
+        width: 100%;
+    }
+}
+/* Make contact card wider on desktop */
+@media (min-width: 900px) {
+  .contact-info {
+    max-width: 900px;
+    padding: 2.5rem 3rem;
+   
+
+}
+ .contact-container {
+    background: rgba(255,255,255,0.4);
+    padding: 4rem 2rem;
+    border-radius: 12px;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 1100px;
+  }
+}

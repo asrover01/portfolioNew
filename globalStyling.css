@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+html, body {
+    height:100%;
+}
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: url(assets/TerracottaBackground.png) fixed;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #3a2f2f;
+    font-size: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(0.3em);
+    padding: 0.75em 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #3a2f2f;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #d96f4c;
+}
+
+
+/* PAGE HEADERS */
+.page-header {
+    
+    text-align: center;
+    padding: 1em 0;
+}
+.project-insight{
+    font-size: 1.1rem;
+    padding:1em 2em 0;
+    color: #3a2f2f;
+    opacity: 0.8;
+}
+.underline {
+   
+    height: 0.2rem;
+    background: #d96f4c;
+    margin: 0.5rem auto;
+    border-radius: 10px;
+}
+.projects-grid a{
+    text-decoration: none;
+    color: #3a2f2f;
+}
+.projects-grid a:hover{
+    color: #d96f4c;
+}
+
+
+
+
+
+.page-content{
+    flex: 1;
+    margin-bottom: 5rem;
+    border: 3px dashed rgba(217,111,76,0.6); 
+}
+
+
+/* FOOTER */
+footer {
+    margin-top: auto; 
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    color: white;
+    opacity: 0.9;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .navbar ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.75em;
+    }
+    .navbar ul li {
+        width: 40%;
+    }
+/* footer sits at the bottom without position */
+footer {
+  margin-top: auto;
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+}
+
+}
+/* Make contact card wider on desktop */
+@media (min-width: 900px) {
+  .contact-info {
+    max-width: 900px;
+    padding: 2.5rem 3rem;
+}
+.contact-container {
+    background: rgba(255,255,255,0.4);
+    padding: 4rem 2rem;
+    border-radius: 12px;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 1100px;
+  }
+}

@@ -1,0 +1,49 @@
+
+.about-container {
+    
+    display: flex;
+    padding: 2em;
+    gap: 2em;
+    
+}
+
+.about-avatar {
+    width: 13rem;
+    border-radius: 10px;
+}
+
+.skills-grid img {
+    width: 3rem;
+    margin: 0.5rem;
+}
+/* responsive: stack columns on small screens */
+@media (max-width: 800px) {
+   
+  .about-container{
+    
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-left {
+    flex: 0 0 auto;
+    margin-bottom: 1rem;
+  }
+
+  .about-right {
+    width: 100%;
+  }
+
+  .skills-grid img {
+    width: 2.5rem;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px){
+    .page-content * {
+  position: static;
+}
+}

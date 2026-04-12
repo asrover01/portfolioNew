@@ -1,0 +1,35 @@
+
+/* PROJECTS */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 2em;
+}
+
+.project-card {
+    background: white;
+    padding: 1em;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.project-img {
+    height: 7.5rem;
+    border-radius: 10px;
+    margin-bottom: 0.75rem;
+}
+
+.orange { background: #d96f4c; }
+.green { background: #7fa88d; }
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+.projects-grid {
+        grid-template-columns: 1fr;
+        padding: 1em;
+    }
+
+
+}
