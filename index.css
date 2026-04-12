@@ -1,38 +1,49 @@
-
 /* HERO */
 .hero {
     display: flex;
-    padding: 3rem;
-    width:100%;
     align-items: center;
     justify-content: center;
-    gap: 3em;
-    margin-top: 10em;
+    flex-wrap: wrap;
+    gap: clamp(2rem, 4vw, 5rem);
+    padding: clamp(2rem, 5vw, 6rem);
+    margin-top: clamp(4rem, 8vw, 10rem);
+    text-align: center;
 }
 
+/* Avatar scales smoothly without overpowering */
 .avatar {
-    width: 13rem;
-    height: 13rem;
+    width: clamp(10rem, 18vw, 18rem);
+    height: clamp(10rem, 18vw, 18rem);
     object-fit: cover;
     border-radius: 50%;
 }
 
+/* Headings scale proportionally to avatar */
 .hero-right h1 {
-    font-size: 2.4rem;
+    font-size: clamp(1.8rem, 3vw, 3.2rem);
     margin: 0;
 }
 
 .hero-right h2 {
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2vw, 1.6rem);
     margin-top: 0.25rem;
     opacity: 0.8;
 }
 
+.hero-sub {
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    padding: 1em 0;
+    color: #3a2f2f;
+    opacity: 0.8;
+}
+
+/* Tech icons scale with the same ratio as avatar + text */
 .tech-row img {
-    width: 7rem;
+    width: clamp(3rem, 6vw, 6rem);
     margin: 0.5rem;
 }
 
+/* Button stays consistent */
 .btn {
     display: inline-block;
     margin-top: 1rem;
@@ -42,6 +53,7 @@
     border-radius: 10px;
     text-decoration: none;
 }
+
 /* MOBILE */
 @media (max-width: 600px) {
 
@@ -53,15 +65,15 @@
     }
 
     .hero-right h1 {
-        font-size: 1.9rem;
+        font-size: clamp(1.9rem, 2.4rem, 3rem);
     }
 
     .hero-right h2 {
-        font-size: 0.1.2rem;
+        font-size: clamp(1.2rem, 1.3rem, 1.5rem);
     }
 
     .tech-row img {
-        width: 5rem;
+        width: clamp(5rem, 5rem + 5vw, 7rem);
         margin: 0.25em;
     }
 
