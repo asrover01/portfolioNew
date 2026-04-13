@@ -1,84 +1,97 @@
 /* HERO */
 .hero {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: clamp(2rem, 4vw, 5rem);
-    padding: clamp(2rem, 5vw, 6rem);
-    margin-top: clamp(4rem, 8vw, 10rem);
+    gap: 2rem;
+    padding: 0 1em;
+    margin-top: 4rem;
     text-align: center;
 }
 
-/* Avatar scales smoothly without overpowering */
+/* Avatar */
 .avatar {
-    width: clamp(10rem, 18vw, 18rem);
-    height: clamp(10rem, 18vw, 18rem);
+    width: 10rem;
+    height: 10rem;
     object-fit: cover;
     border-radius: 50%;
 }
 
-/* Headings scale proportionally to avatar */
+/* Headings */
 .hero-right h1 {
-    font-size: clamp(1.8rem, 3vw, 3.2rem);
+    font-size: 1.9rem;
     margin: 0;
 }
 
 .hero-right h2 {
-    font-size: clamp(1rem, 2vw, 1.6rem);
+    font-size: 1.2rem;
     margin-top: 0.25rem;
     opacity: 0.8;
 }
 
 .hero-sub {
-    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    font-size: 0.9rem;
     padding: 1em 0;
     color: #3a2f2f;
     opacity: 0.8;
 }
 
-/* Tech icons scale with the same ratio as avatar + text */
+/* Tech icons */
 .tech-row img {
-    width: clamp(3rem, 6vw, 6rem);
-    margin: 0.5rem;
+    width: 5rem;
+    margin: 0.25em;
 }
 
-/* Button stays consistent */
+/* Button */
 .btn {
     display: inline-block;
     margin-top: 1rem;
-    padding: 0.6em 1.2em;
+    padding: 0.5em 1em;
+    font-size: 1.2rem;
     background: #d96f4c;
     color: white;
     border-radius: 10px;
     text-decoration: none;
 }
 
-/* MOBILE */
-@media (max-width: 600px) {
+/* -------------------------------------- */
+/* TABLET / DESKTOP (≥600px)              */
+/* -------------------------------------- */
+@media (min-width: 600px) {
 
     .hero {
-        margin-top: 4rem;
-        flex-direction: column;
-        text-align: center;
-        padding: 0 1em;
+        flex-direction: row;
+        gap: clamp(2rem, 4vw, 5rem);
+        padding: clamp(2rem, 5vw, 6rem);
+        margin-top: clamp(4rem, 8vw, 10rem);
+    }
+
+    .avatar {
+        width: clamp(10rem, 18vw, 18rem);
+        height: clamp(10rem, 18vw, 18rem);
     }
 
     .hero-right h1 {
-        font-size: clamp(1.9rem, 2.4rem, 3rem);
+        font-size: clamp(1.8rem, 3vw, 3.2rem);
     }
 
     .hero-right h2 {
-        font-size: clamp(1.2rem, 1.3rem, 1.5rem);
+        font-size: clamp(1rem, 2vw, 1.6rem);
+    }
+
+    .hero-sub {
+        font-size: clamp(0.9rem, 1.5vw, 1.2rem);
     }
 
     .tech-row img {
-        width: clamp(5rem, 5rem + 5vw, 7rem);
-        margin: 0.25em;
+        width: clamp(3rem, 6vw, 6rem);
+        margin: 0.5rem;
     }
 
     .btn {
-        padding: 0.5em 1em;
-        font-size: 1.2rem;
+        padding: 0.6em 1.2em;
+        font-size: 1rem;
     }
 }
