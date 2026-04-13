@@ -23,39 +23,31 @@
     opacity: 0.9;
 }
 
+
 /* Contact button */
 .contact-btn {
-    display: inline-block;
-    background: #d96f4c;
-    color: #fff;
-    padding: 0.7rem 1.2rem;
-    border-radius: 10px;
     text-decoration: none;
     font-weight: 600;
-    margin: 1rem;
+    
 }
 
-.contact-btn:hover,
-.contact-btn:focus {
-    background: #c85f3f;
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(217,111,76,0.15);
-}
 
 /* Phone line */
-.phone-line {
-    margin-top: 0.5rem;
+.phone-line, 
+.email-line {
+    margin-left: 0.5rem;
     color: #3a2f2f;
 }
 
 .phone-link {
     display: block;
     margin: 0.5rem 0 0;
-    color: #3a2f2f;
     text-decoration: none;
     font-weight: 600;
 }
-
+/* Hover effects */
+.contact-btn:hover,
+.contact-btn:focus,
 .phone-link:hover,
 .phone-link:focus {
     color: #d96f4c;
