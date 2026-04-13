@@ -1,110 +1,115 @@
 /* CONTACT */
 .contact-container {
     display: flex;
-    padding: 2em;
-    gap: 2rem;
+    flex-direction: column;
+    padding: 1em;
+    gap: 1.5rem;
+    align-items: center;
+    text-align: center;
 }
-/* Contact button and phone styling */
-.contact-container {
-  display: flex;
-  padding: 2em;
-  gap: 2rem;
-  align-items: flex-start;
+
+.contact-info,
+.contact-form {
+    width: 100%;
 }
 
 .contact-info {
-  max-width: 40rem;
+    max-width: 40rem;
 }
 
 .contact-text {
-  margin: 0.5rem 0 1rem;
-  color: #3a2f2f;
-  opacity: 0.9;
+    margin: 0.5rem 0 1rem;
+    color: #3a2f2f;
+    opacity: 0.9;
 }
 
-/* Mailto styled as a button */
+/* Contact button */
 .contact-btn {
-  display: inline-block;
-  background: #d96f4c;
-  color: #fff;
-  padding: 0.7rem 1.2rem;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  margin: 1rem;
-  
+    display: inline-block;
+    background: #d96f4c;
+    color: #fff;
+    padding: 0.7rem 1.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 1rem;
 }
 
-/* Hover/focus states */
 .contact-btn:hover,
 .contact-btn:focus {
-  background: #c85f3f;
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(217,111,76,0.15);
+    background: #c85f3f;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(217,111,76,0.15);
 }
 
 /* Phone line */
 .phone-line {
-  margin-top: 0.5rem;
-  color: #3a2f2f;
+    margin-top: 0.5rem;
+    color: #3a2f2f;
 }
 
 .phone-link {
-  display: inline-block;
-  margin-left: 0.5rem;
-  color: #3a2f2f;
-  text-decoration: none;
-  font-weight: 600;
+    display: block;
+    margin: 0.5rem 0 0;
+    color: #3a2f2f;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 .phone-link:hover,
 .phone-link:focus {
-  color: #d96f4c;
-  text-decoration: underline;
+    color: #d96f4c;
+    text-decoration: underline;
 }
-/* Responsive: stack on small screens */
-@media (max-width: 800px) {
-  .contact-container {
-    flex-direction: column;
-    padding: 1rem;
-    align-items: center;
-    text-align: center;
-  }
 
-  .contact-info {
-    width: 100%;
-  }
+/* Fix page-content positioning on small screens */
+.page-content * {
+    position: static;
+}
 
-  .phone-link {
-    display: block;
-    margin: 0.5rem 0 0;
-  }
-}
-/* MOBILE */
-@media (max-width: 600px){
-      .contact-container {
-        flex-direction: column;
-        padding: 1em;
+/* -------------------------------------- */
+/* TABLET (≥800px)                        */
+/* -------------------------------------- */
+@media (min-width: 800px) {
+
+    .contact-container {
+        flex-direction: row;
+        padding: 2em;
+        gap: 2rem;
+        align-items: flex-start;
+        text-align: left;
     }
-    .contact-form,
-     .contact-info {
-        width: 100%;
+
+    .phone-link {
+        display: inline-block;
+        margin-left: 0.5rem;
+    }
+
+    .contact-info {
+        width: auto;
+    }
+
+    .skills-grid img {
+        width: clamp(3rem, 6vw, 8rem);
     }
 }
-/* Make contact card wider on desktop */
+
+/* -------------------------------------- */
+/* LARGE DESKTOP (≥900px)                 */
+/* -------------------------------------- */
 @media (min-width: 900px) {
-  .contact-info {
-    max-width: 900px;
-    padding: 2.5rem 3rem;
-   
 
-}
- .contact-container {
-    background: rgba(255,255,255,0.4);
-    padding: 4rem 2rem;
-    border-radius: 12px;
-    margin: 2rem auto;
-    width: 90%;
-    max-width: 1100px;
-  }
+    .contact-info {
+        max-width: 900px;
+        padding: 2.5rem 3rem;
+    }
+
+    .contact-container {
+        background: rgba(255,255,255,0.4);
+        padding: 4rem 2rem;
+        border-radius: 12px;
+        margin: 2rem auto;
+        width: 90%;
+        max-width: 1100px;
+    }
 }
