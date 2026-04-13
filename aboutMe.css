@@ -1,10 +1,25 @@
+.page-content {
+    flex: 1;
+    margin-bottom: 2rem;
+    border: 3px dashed rgba(217,111,76,0.6);
+}
 
 .about-container {
-    
     display: flex;
-    padding: 2em;
-    gap: 2em;
-    
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
+    align-items: center;
+    text-align: center;
+}
+
+.about-left {
+    flex: 0 0 auto;
+    margin-bottom: 1rem;
+}
+
+.about-right {
+    width: 100%;
 }
 
 .about-avatar {
@@ -12,38 +27,39 @@
     border-radius: 10px;
 }
 
+/* Skills icons — mobile default */
 .skills-grid img {
-   width: clamp(3rem, 6vw, 8rem);
+    width: 2.5rem;
     margin: 0.5rem;
 }
-/* responsive: stack columns on small screens */
-@media (max-width: 800px) {
-   
-  .about-container{
-    
-    flex-direction: column;
-    padding: 1rem;
-    align-items: center;
-    text-align: center;
-  }
 
-  .about-left {
-    flex: 0 0 auto;
-    margin-bottom: 1rem;
-  }
-
-  .about-right {
-    width: 100%;
-  }
-
-  .skills-grid img {
-    width: 2.5rem;
-  }
+/* Fix page-content positioning on small screens */
+.page-content * {
+    position: static;
 }
 
-/* MOBILE */
-@media (max-width: 600px){
-    .page-content * {
-  position: static;
-}
+/* -------------------------------------- */
+/* TABLET / DESKTOP (≥800px)              */
+/* -------------------------------------- */
+@media (min-width: 800px) {
+
+    .about-container {
+        flex-direction: row;
+        padding: 2em;
+        gap: 2em;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .about-left {
+        margin-bottom: 0;
+    }
+
+    .about-right {
+        width: auto;
+    }
+
+    .skills-grid img {
+        width: clamp(3rem, 6vw, 8rem);
+    }
 }
