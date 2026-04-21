@@ -47,10 +47,7 @@ body {
     font-size: 1.2rem;
 }
 
-.navbar a:hover,
-.navbar a.active {
-    color: #d96f4c;
-}
+
 
 /* PAGE HEADERS */
 .page-header {
@@ -124,6 +121,11 @@ body, .page-content, .page-header, .navbar {
     height: 2px;
     background: #d96f4c;
     transition: width 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #d96f4c;
 }
 
 .navbar a:hover::after,
